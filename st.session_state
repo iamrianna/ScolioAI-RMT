@@ -1,0 +1,27 @@
+# Initialize session state variables
+if "upper_vertebra" not in st.session_state:
+    st.session_state.upper_vertebra = 5  # e.g., T5
+if "lower_vertebra" not in st.session_state:
+    st.session_state.lower_vertebra = 12 # e.g., L1
+
+# Sliders bound to session state
+st.sidebar.subheader("Vertebral Endplate Adjustments")
+st.session_state.upper_vertebra = st.sidebar.slider(
+    "Superior Endplate Vertebra", 1, 12, st.session_state.upper_vertebra
+)
+st.session_state.lower_vertebra = st.sidebar.slider(
+    "Inferior Endplate Vertebra", 13, 24, st.session_state.lower_vertebra
+)
+
+# Recalculate angle based on current state values
+def compute_cobb_angle(upper, lower):
+    # Stub for your geometric Cobb angle calculation logic
+    # In production, derive this dynamically from landmark coordinates
+    base_angle = 16.6
+    adjustment = abs(upper - 5) * 0.5 + abs(lower - 12) * 0.5
+    return round(base_angle + adjustment, 1)
+
+current_cobb_angle = compute_cobb_angle(
+    st.session_state.upper_vertebra, 
+    st.session_state.lower_vertebra
+)
