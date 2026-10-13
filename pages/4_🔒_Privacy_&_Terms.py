@@ -3,7 +3,7 @@ import streamlit as st
 st.header("Data Privacy & Responsible Use Guidelines")
 
 st.markdown("""
-<div class="card">
+<div style="background-color: #FFFFFF; border-radius: 12px; padding: 24px; border: 1px solid #E2E8F0; margin-bottom: 20px;">
     <h3>Data Privacy Assurance</h3>
     <p>Scolio-AI processes uploaded files strictly within runtime memory (RAM) during your active browser session:</p>
     <ul>
