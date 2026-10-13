@@ -3,7 +3,7 @@ import streamlit as st
 st.header("Scoliosis Clinical Background & AI Safety")
 
 st.markdown("""
-<div class="card">
+<div style="background-color: #FFFFFF; border-radius: 12px; padding: 24px; border: 1px solid #E2E8F0; margin-bottom: 20px;">
     <h3>Understanding Scoliosis Assessment</h3>
     <p>Scoliosis is a three-dimensional spinal deformity defined as a lateral curvature of the spine in the frontal plane of <b>10 degrees or greater</b>, measured via the Cobb angle method on standing radiographs.</p>
     
